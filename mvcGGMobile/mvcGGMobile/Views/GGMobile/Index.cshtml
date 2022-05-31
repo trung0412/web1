@@ -1,0 +1,33 @@
+﻿@model IEnumerable<mvcGGMobile.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div class="row">
+    @foreach (var SanPham in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <a href="@Url.Action("Details" , "GGMobile" , new { id = SanPham.MaSP})">
+                    <img alt="@SanPham.TenSP" src="~/Hinhsanpham/13.png" width="500" />
+                    <div>
+                        <br />
+                        <h4 style="text-align:center">
+                            @SanPham.TenSP
+                        </h4>
+                        <p></p>
+                    </div>
+                    <div>
+                        <h4 style="text-align:center">
+                            @SanPham.Giaban
+                        </h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+     }
+
+
+</div>
+

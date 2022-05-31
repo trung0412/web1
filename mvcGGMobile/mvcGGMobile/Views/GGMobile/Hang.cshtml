@@ -1,0 +1,12 @@
+﻿@model IEnumerable<mvcGGMobile.Models.Hang>
+
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+    <a href="@Url.Action("SPTheoHang", "GGMobile", new { id = item.MaHang})" class="list-group-item">
+        @item.TenHang
+    </a>
+        
+    }
+</div>
+
